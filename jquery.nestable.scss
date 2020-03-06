@@ -43,25 +43,30 @@ $nestable-handle-class3: dd3-handle;
   padding: 0;
   min-height: 20px;
   font-size: 13px;
-  line-height: 20px;
+  line-height: 32px;
 }
 
 .#{$nestable-handle-class} {
   display: block;
-  height: 30px;
   margin: 5px 0;
   padding: 5px 10px;
   color: #333;
   text-decoration: none;
-  font-weight: bold;
   border: 1px solid #ccc;
   background: #fafafa;
-  border-radius: 3px;
+  border-radius: 2px;
   box-sizing: border-box;
 
   &:hover {
     color: #2ea8e5;
     background: #fff;
+  }
+
+  .tools {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 6px;
   }
 }
 
@@ -69,8 +74,8 @@ $nestable-handle-class3: dd3-handle;
   position: relative;
   cursor: pointer;
   float: left;
-  width: 25px;
-  height: 20px;
+  width: 30px;
+  height: 32px;
   margin: 5px 0;
   padding: 0;
   text-indent: 100%;
@@ -78,8 +83,6 @@ $nestable-handle-class3: dd3-handle;
   overflow: hidden;
   border: 0;
   background: transparent;
-  font-size: 12px;
-  line-height: 1;
   text-align: center;
   font-weight: bold;
 
@@ -173,20 +176,27 @@ $nestable-handle-class3: dd3-handle;
 		}
 	}
 }
+.#{$nestable-item-class3}
+ > .#{$nestable-content-class3} {
+  line-height: 20px;
+}
 .#{$nestable-drag-class} {
 	>.#{$nestable-item-class3} {
 		>.#{$nestable-content-class3} {
-			margin: 0;
+      margin: 0;
 		}
 	}
 }
 .#{$nestable-item-class3} {
 	>button {
-		margin-left: 30px;
+    margin-left: 30px;
+    width: 20px;
+    height: 20px;
 	}
 }
 .#{$nestable-handle-class3} {
-	position: absolute;
+  position: absolute;
+  height: 30px;
 	margin: 0;
 	left: 0;
 	top: 0;
